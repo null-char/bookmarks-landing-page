@@ -94,7 +94,7 @@ const Navigation: React.FC = () => {
           <DesktopNavItem>
             <a href="#">Contact</a>
           </DesktopNavItem>
-          <DesktopLoginBtn>Login</DesktopLoginBtn>
+          <DesktopLoginBtn tertiary>Login</DesktopLoginBtn>
         </DesktopNavLinks>
       </DesktopNav>
     </Wrapper>
