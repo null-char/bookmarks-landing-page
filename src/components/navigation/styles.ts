@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 import device from "@/utils/media";
+import Button from "@/components/button/button";
 
 export const Wrapper = styled.div`
-  font-size: 1.3rem;
+  font-size: 2rem;
   text-transform: uppercase;
 `;
 
@@ -17,8 +18,7 @@ export const MobileNav = styled.nav`
 
 export const DesktopNav = styled.nav`
   display: none;
-  width: 30rem;
-  font-size: 1.1rem;
+  width: 40rem;
 
   @media ${device.tablet} {
     display: block;
@@ -46,7 +46,6 @@ export const MainContainer = styled(animated.div)`
   height: 100%;
   width: 100%;
   z-index: 2;
-  opacity: 0.9;
 `;
 
 // close icon and logo
@@ -54,7 +53,7 @@ export const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2.7rem;
+  margin-bottom: 5rem;
 `;
 
 export const CloseIcon = styled.img`
@@ -83,33 +82,16 @@ export const DesktopNavLinks = styled(NavLinks)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.6rem;
 `;
 
-export const DesktopLoginBtn = styled.button`
-  cursor: pointer;
-  outline: 0;
-  border: 0;
-  padding: 0.6rem 1.5rem;
-  font-size: inherit;
-  font-family: inherit;
-  color: ${props => props.theme.colors.white};
-  transition: all 0.2s ease-in-out;
-  border-radius: 0.3rem;
-  background-color: ${props => props.theme.colors.softRed};
-  box-shadow: 0rem 0.3rem 0.6rem
-    rgba(${props => props.theme.colors.rgbSoftRed}, 0.25);
+export const DesktopLoginBtn = styled(Button)`
   text-transform: uppercase;
-
-  :hover {
-    transform: translateY(-0.1rem);
-    box-shadow: 0rem 0.4rem 1rem
-      rgba(${props => props.theme.colors.rgbSoftRed}, 0.25);
-  }
 `;
 
 export const NavItem = styled.ul`
   width: 100%;
-  height: 4rem;
+  height: 6.2rem;
   letter-spacing: 0.2rem;
   display: flex;
   align-items: center;
