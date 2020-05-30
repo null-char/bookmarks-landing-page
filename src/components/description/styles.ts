@@ -25,11 +25,6 @@ export const Content = styled.div`
     grid-area: 1 / 1 / 1 / 1;
     text-align: left;
   }
-
-  p {
-    font-size: 1.8rem;
-    color: ${props => props.theme.colors.grayishBlue};
-  }
 `;
 
 export const Heading = styled.h1`
@@ -38,7 +33,7 @@ export const Heading = styled.h1`
   text-transform: capitalize;
 
   @media ${device.laptop} {
-    font-size: 4.3rem;
+    font-size: 4.2rem;
   }
 `;
 
