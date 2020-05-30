@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     box-sizing: border-box;
     overflow-x: hidden;
-    padding: 0rem 2.3rem;
+    padding: 0rem 2.7rem;
     padding-bottom: 3rem;
 
     @media ${device.tablet} {
@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media ${device.laptop} {
-      padding: 0rem 5rem;
+     padding: 0rem 5rem;
     }
   }
 
