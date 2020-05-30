@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 import device from "@/utils/media";
-import Button from "@/components/button/button";
+import Button from "@/components/button/button.ts";
 
 export const Wrapper = styled.div`
   font-size: 2rem;
