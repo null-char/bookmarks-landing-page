@@ -46,7 +46,8 @@ const Button = styled.button<ButtonProps>`
   ${props =>
     props.secondary &&
     css`
-      background-color: ${props => props.theme.colors.grayishBlue};
+      background-color: rgba(0, 0, 0, 0.05);
+      color: ${props => props.theme.colors.darkBlue};
       box-shadow: 0rem 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
 
       :hover {
