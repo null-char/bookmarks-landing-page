@@ -1,5 +1,6 @@
 import React from "react";
-import { Fade, Slide } from "react-reveal";
+import { Fade } from "react-reveal";
+import Paragraph from "@/components/paragraph/paragraph.ts";
 import illustrationHero from "@/assets/illustration-hero.svg";
 import {
   Wrapper,
@@ -22,10 +23,10 @@ const Description: React.FC = () => (
     <Content>
       <Fade left>
         <Heading>A simple bookmark manager</Heading>
-        <p>
+        <Paragraph>
           A clean and simple interface to organize your favorite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
-        </p>
+        </Paragraph>
         <ButtonContainer>
           <StyledButton primary>Get it on Chrome</StyledButton>
           <StyledButton secondary>Get it on Firefox</StyledButton>
