@@ -1,11 +1,12 @@
 import React from "react";
 import { graphql, PageProps } from "gatsby";
 import styled from "styled-components";
-import Layout from "@/components/layout";
+import Layout from "@/components/layout.tsx";
 import Header from "@/components/header/header.tsx";
 import Description from "@/components/description/description.tsx";
 import Features from "@/components/features/features.tsx";
 import DownloadSection from "@/components/download-section/download-section.tsx";
+import FAQs from "@/components/faqs/faqs.tsx";
 import SEO from "@/components/seo";
 
 const GridContainer = styled.div`
@@ -34,6 +35,7 @@ const IndexPage: React.FC<PageProps<QueryData>> = ({ data }) => (
       <Description />
       <Features />
       <DownloadSection />
+      <FAQs />
     </GridContainer>
   </Layout>
 );
