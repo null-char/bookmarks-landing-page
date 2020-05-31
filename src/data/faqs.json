@@ -1,0 +1,19 @@
+{
+  "faqs": [{
+      "question": "What is Bookmark?",
+      "answer": "Bookmark is a browser extension which allows you to easily manage your bookmarks. The extension provides simple utilities including but not limited to: searching through your bookmarks, categorizing them into collections, sharing bookmarks and much more."
+    },
+    {
+      "question": "How can I request a new browser?",
+      "answer": "We conduct frequent polls through our newsletter if you wish to voice your opinion on which browsers should be prioritized. We will almost always choose to work on the browsers that have the most demand."
+    },
+    {
+      "question": "Is there a mobile app?",
+      "answer": "Currently there are no plans for developing a mobile app. However, if there is enough demand for it, we're definitely willing to develop one for you!"
+    },
+    {
+      "question": "What about other Chromium browsers?",
+      "answer": "We're hard at work in developing compatible extensions for other chromium browsers such as Microsoft Edge and Brave."
+    }
+  ]
+}
