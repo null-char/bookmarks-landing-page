@@ -1,4 +1,5 @@
 import React from "react";
+import { Flip } from "react-reveal";
 import chromeLogo from "@/assets/logo-chrome.svg";
 import firefoxLogo from "@/assets/logo-firefox.svg";
 import operaLogo from "@/assets/logo-opera.svg";
@@ -16,7 +17,7 @@ import {
 const DownloadSection = () => (
   <Wrapper>
     <TextContent>
-      <Fade>
+      <Fade cascade>
         <MainHeading>Download the extension</MainHeading>
         <Paragraph alignCenter>
           We've got more browsers in the pipeline. Please do let us know if
@@ -26,26 +27,22 @@ const DownloadSection = () => (
     </TextContent>
 
     <CardsContainer>
-      <div>
+      <Flip left fraction={0.7}>
         <InstallCard browserSvgUrl={chromeLogo}>
           <SubHeading>Add to Chrome</SubHeading>
           <Paragraph>Minimum version 62</Paragraph>
         </InstallCard>
-      </div>
 
-      <div>
         <InstallCard browserSvgUrl={firefoxLogo}>
           <SubHeading>Add to Firefox</SubHeading>
           <Paragraph>Minimum version 55</Paragraph>
         </InstallCard>
-      </div>
 
-      <div>
         <InstallCard browserSvgUrl={operaLogo}>
           <SubHeading>Add to Opera</SubHeading>
           <Paragraph>Minimum version 46</Paragraph>
         </InstallCard>
-      </div>
+      </Flip>
     </CardsContainer>
   </Wrapper>
 );
