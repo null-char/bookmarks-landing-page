@@ -87,7 +87,7 @@ const Features: React.FC = () => {
   return (
     <Wrapper>
       <TextContent>
-        <Fade cascade duration={1500}>
+        <Fade cascade>
           <MainHeading>Features</MainHeading>
           <Paragraph alignCenter>
             Our aim is to make it quick and easy for you to access your favorite
@@ -98,7 +98,7 @@ const Features: React.FC = () => {
       </TextContent>
 
       <FeaturesList>
-        <Roll cascade delay={250}>
+        <Roll cascade delay={100}>
           <FeatureItem
             selected={activeTab === 1}
             onClick={onFeatureClick}
