@@ -32,8 +32,16 @@ const GlobalStyles = createGlobalStyle`
       font-size: 11px;
     }
 
+    @media ${device.laptopL} {
+      font-size: 12px;
+    }
+
     @media ${device.desktop} {
       font-size: 14px;
+    }
+
+    @media ${device.desktopL} {
+      font-size: 18px;
     }
   }
 `;
