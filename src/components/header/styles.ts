@@ -22,3 +22,7 @@ export const Wrapper = styled.header`
     padding: 2rem 5rem;
   }
 `;
+
+export const Logo = styled.img`
+  height: 2rem;
+`;
