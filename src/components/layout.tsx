@@ -22,16 +22,6 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     box-sizing: border-box;
     overflow-x: hidden;
-    padding: 0rem 2.7rem;
-    padding-bottom: 3rem;
-
-    @media ${device.tablet} {
-      padding: 0rem 3rem;
-    }
-
-    @media ${device.laptop} {
-     padding: 0rem 5rem;
-    }
   }
 
   html, body {
@@ -40,6 +30,10 @@ const GlobalStyles = createGlobalStyle`
 
     @media ${device.laptop} {
       font-size: 11px;
+    }
+
+    @media ${device.desktop} {
+      font-size: 14px;
     }
   }
 `;
