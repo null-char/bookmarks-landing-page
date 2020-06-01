@@ -11,7 +11,10 @@ export const Wrapper = styled.section`
   grid-template-columns: 100%;
   row-gap: 3rem;
   justify-content: center;
-  justify-items: center;
+
+  @media ${device.tablet} {
+    justify-items: center;
+  }
 `;
 
 export const TextContent = styled.div`
@@ -27,7 +30,7 @@ export const TextContent = styled.div`
 `;
 
 export const Questions = styled.div`
-  justify-self: center;
+  width: 100%;
 
   @media ${device.tablet} {
     width: 40rem;
@@ -40,6 +43,7 @@ export const QuestionItemWrapper = styled.div`
   row-gap: 1.5rem;
   padding: 1.5rem 0rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
 `;
 
 export const Answer = styled(animated.p)`
