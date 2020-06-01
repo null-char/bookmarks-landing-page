@@ -3,6 +3,10 @@ import { animated } from "react-spring";
 import Button from "@/components/button/button.ts";
 import device from "@/utils/media";
 
+type ErrorProps = {
+  hasError: boolean;
+};
+
 export const Wrapper = styled.footer`
   width: 100%;
 `;
@@ -15,6 +19,10 @@ export const NewsLetter = styled.div`
   row-gap: 3rem;
   align-items: center;
   justify-content: center;
+
+  @media ${device.tablet} {
+    padding: 4.5rem 2.7rem;
+  }
 `;
 
 export const TextContent = styled.div`
@@ -38,7 +46,7 @@ export const ContactForm = styled.form`
   display: grid;
   grid-template-rows: repeat(2, min-content);
   grid-template-columns: 100%;
-  row-gap: 1.5rem;
+  row-gap: 2.3rem;
 
   @media ${device.tablet} {
     grid-template-rows: 100%;
@@ -51,9 +59,10 @@ export const Contact = styled.div`
   display: grid;
   grid-template-rows: repeat(2, min-content);
   grid-template-columns: 1fr;
+  position: relative;
 `;
 
-export const ContactInputContainer = styled.label`
+export const ContactInputContainer = styled.div<ErrorProps>`
   display: grid;
   grid-template-columns: repeat(2, min-content);
   justify-content: space-between;
@@ -62,24 +71,29 @@ export const ContactInputContainer = styled.label`
   border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
   background-color: ${props => props.theme.colors.white};
-
-  :focus {
-    border: 1px solid ${props => props.theme.colors.softRed};
-  }
-
-  @media ${device.tablet} {
-  }
+  border: 3px solid
+    ${props => (props.hasError ? props.theme.colors.softRed : "transparent")};
+  border-bottom: none;
 `;
 
 export const ErrorMessage = styled(animated.div)`
   grid-area: 2 / 1 / 3 / 3;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1;
   text-transform: italics;
-  padding: 1rem;
+  padding: 0.5rem 2rem;
   background-color: ${props => props.theme.colors.softRed};
   color: ${props => props.theme.colors.white};
   transform: translateY(-0.5rem);
+  position: absolute;
+  top: 0;
+
+  @media ${device.tablet} {
+    position: absolute;
+    top: 0;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
 `;
 
 export const ErrorIcon = styled.img`
@@ -93,22 +107,17 @@ export const ContactInput = styled.input`
   color: ${props => props.theme.colors.darkBlue};
 `;
 
-type ContactBtnProps = {
-  hasError: boolean;
-};
-
-export const ContactBtn = styled(Button)<ContactBtnProps>`
+export const ContactBtn = styled(Button)<ErrorProps>`
   width: 100%;
   font-size: 1.4rem;
   text-transform: capitalize;
   padding: 1.4rem 2rem;
-  transition: height 1.5s ease-in-out;
+  height: 4.4rem;
 
   @media ${device.tablet} {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: ${props => (props.hasError ? "50%" : "100%")};
   }
 `;
 

@@ -30,6 +30,8 @@ const Footer: React.FC = () => {
   const [error, setError] = useState("");
   const [hasError, setHasError] = useState(false);
 
+  // using max-height as a workaround here
+  // note that transition "durations" can be skewed when using max-height
   const errorTransitions = useTransition(hasError, null, {
     from: { opacity: 0, maxHeight: "0rem" },
     enter: { opacity: 1, maxHeight: "3.4rem" },
@@ -43,6 +45,7 @@ const Footer: React.FC = () => {
   const onFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (error || hasError) {
+      // reset errors
       setError("");
       setHasError(false);
     }
@@ -67,7 +70,7 @@ const Footer: React.FC = () => {
 
         <ContactForm>
           <Contact>
-            <ContactInputContainer>
+            <ContactInputContainer hasError={hasError}>
               <ContactInput
                 type="email"
                 value={emailInput}
