@@ -77,6 +77,10 @@ const Button = styled.button<ButtonProps>`
           rgba(${props => props.theme.colors.rgbSoftRed}, 0.25);
       }
     `};
+
+  :focus {
+    border: 2px solid ${props => props.theme.colors.darkBlue};
+  }
 `;
 
 Button.defaultProps = {
